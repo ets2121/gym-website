@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule | IronForge Gym</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .schedule-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .filter-btns {
+            display: flex;
+            gap: 1rem;
+        }
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            background: #333;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn.active {
+            background: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">IRON<span>FORGE</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <a href="register.html" class="btn btn-primary">Join Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="margin-top: 80px;">
+            <div class="container">
+                <div class="schedule-header">
+                    <h1>Class Schedule</h1>
+                    <div class="filter-btns">
+                        <button class="filter-btn active">All Classes</button>
+                        <button class="filter-btn">Strength</button>
+                        <button class="filter-btn">Cardio</button>
+                        <button class="filter-btn">Yoga</button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Trainer</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monday</td>
+                            <td>06:00 AM</td>
+                            <td>Early Bird HIIT</td>
+                            <td>Sarah Chen</td>
+                            <td><a href="register.html" style="color: var(--secondary);">Book Now</a></td>
+                        </tr>
+                        <tr>
+                            <td>Monday</td>
+                            <td>05:00 PM</td>
+                            <td>Power Lifting</td>
+                            <td>Alex Rivera</td>
+                            <td><a href="register.html" style="color: var(--secondary);">Book Now</a></td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>07:00 AM</td>
+                            <td>Yoga Flow</td>
+                            <td>Elena Moss</td>
+                            <td><a href="register.html" style="color: var(--secondary);">Book Now</a></td>
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td>06:00 PM</td>
+                            <td>Zumba Party</td>
+                            <td>Mike "Magic" Johnson</td>
+                            <td><a href="register.html" style="color: var(--secondary);">Book Now</a></td>
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td>06:00 AM</td>
+                            <td>CrossFit Circuit</td>
+                            <td>Alex Rivera</td>
+                            <td><a href="register.html" style="color: var(--secondary);">Book Now</a></td>
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td>05:30 PM</td>
+                            <td>Core & Abs</td>
+                            <td>Sarah Chen</td>
+                            <td><a href="register.html" style="color: var(--secondary);">Book Now</a></td>
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td>06:00 AM</td>
+                            <td>Bootcamp</td>
+                            <td>Alex Rivera</td>
+                            <td><a href="register.html" style="color: var(--secondary);">Book Now</a></td>
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td>09:00 AM</td>
+                            <td>Strength Endurance</td>
+                            <td>Sarah Chen</td>
+                            <td><a href="register.html" style="color: var(--secondary);">Book Now</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p class="copyright">&copy; 2026 IronForge Gym. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

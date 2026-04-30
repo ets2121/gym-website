@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | IronForge Gym</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .register-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+            background: #2E7D32;
+            color: white;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">IRON<span>FORGE</span></a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="plans.html">Plans</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="margin-top: 80px;">
+            <div class="container">
+                <div class="register-container">
+                    <h2 style="text-align: center; margin-bottom: 2rem;">Membership Signup</h2>
+                    <form id="registerForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="number" id="age" name="age" placeholder="25" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" required>
+                                    <option value="">Select</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Contact Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="plan">Membership Plan</label>
+                            <select id="plan" name="plan" required>
+                                <option value="">Choose a plan</option>
+                                <option value="basic">Basic Plan ($29/mo)</option>
+                                <option value="standard">Standard Plan ($49/mo)</option>
+                                <option value="premium">Premium Plan ($89/mo)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="startDate">Preferred Start Date</label>
+                            <input type="date" id="startDate" name="startDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="goals">Fitness Goals</label>
+                            <textarea id="goals" name="goals" rows="4" placeholder="Tell us what you want to achieve..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Complete Registration</button>
+                    </form>
+                    <div id="successMessage" class="success-message">
+                        <h3>Registration Successful!</h3>
+                        <p>Welcome to the IronForge family. We'll contact you shortly to finalize your membership.</p>
+                        <a href="index.html" class="btn btn-outline" style="margin-top: 1rem; border-color: white; color: white;">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.style.display = 'none';
+            document.getElementById('successMessage').style.display = 'block';
+            console.log('Form Submitted:', new FormData(this));
+        });
+
+        // Pre-select plan from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const plan = urlParams.get('plan');
+        if (plan) {
+            document.getElementById('plan').value = plan;
+        }
+    </script>
+</body>
+</html>
